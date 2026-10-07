@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>مشتل كاميليا | لاند سكيب وتنسيق حدائق</title>
+
+    <meta name="description"
+          content="مشتل كاميليا للاند سكيب وتنسيق الحدائق العامة والخاصة في حي الملقا - طريق الملك سلمان">
+
+    <meta name="theme-color" content="#0c2e22">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* =========================================================
+           GENERAL
+        ========================================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Cairo", sans-serif;
+            background: #061812;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        :root {
+            --green-dark: #061812;
+            --green: #0c2e22;
+            --green-light: #1e7651;
+            --lime: #b8dc72;
+            --gold: #d9bd72;
+            --white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.09);
+            --glass-border: rgba(255, 255, 255, 0.15);
+        }
+
+        /* =========================================================
+           BACKGROUND GLOWS
+        ========================================================= */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(62, 180, 113, 0.12);
+            filter: blur(100px);
+            top: -150px;
+            right: -150px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background: rgba(184, 220, 114, 0.08);
+            filter: blur(100px);
+            bottom: -150px;
+            left: -150px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* =========================================================
+           CONTAINER & GLASS
+        ========================================================= */
+        .container {
+            width: min(1180px, 90%);
+            margin: auto;
+        }
+
+        .glass {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.20);
+        }
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .navbar {
+            width: min(1180px, 92%);
+            margin: auto;
+            border-radius: 22px;
+            padding: 12px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(5, 25, 18, 0.85);
+            border: 1px solid rgba(255,255,255,0.12);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e7651, #9bc95e);
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(85, 180, 110, 0.3);
+        }
+
+        .logo span {
+            color: var(--lime);
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.85);
+            font-size: 14px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--lime);
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -7px;
+            right: 0;
+            background: var(--lime);
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-right-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            padding: 10px 17px;
+            border-radius: 12px;
+            background: var(--lime);
+            color: #102518;
+            font-weight: 800;
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(184,220,114,0.3);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--lime);
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .mobile-toggle:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(4,22,15,0.98),
+                    rgba(4,22,15,0.72),
+                    rgba(4,22,15,0.38)
+                ),
+                url("https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=2000&q=90")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 760px;
+            padding-top: 70px;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 15px;
+            border-radius: 50px;
+            background: rgba(184,220,114,0.12);
+            border: 1px solid rgba(184,220,114,0.25);
+            color: var(--lime);
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 78px);
+            line-height: 1.12;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: var(--lime);
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 2;
+            color: rgba(255,255,255,0.80);
+            max-width: 650px;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 14px 22px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.35s;
+        }
+
+        .btn-primary {
+            background: var(--lime);
+            color: #122319;
+            box-shadow: 0 12px 30px rgba(184,220,114,0.18);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 35px rgba(184,220,114,0.28);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.20);
+            background: rgba(255,255,255,0.07);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.13);
+            transform: translateY(-4px);
+        }
+
+        /* Floating Leaves */
+        .leaf {
+            position: absolute;
+            opacity: 0.15;
+            color: var(--lime);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .leaf.one {
+            font-size: 100px;
+            right: 8%;
+            top: 22%;
+        }
+
+        .leaf.two {
+            font-size: 65px;
+            left: 15%;
+            bottom: 20%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+            0%,100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-25px) rotate(8deg); }
+        }
+
+        /* =========================================================
+           SECTIONS GENERAL
+        ========================================================= */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 55px;
+        }
+
+        .section-heading .small-title {
+            color: var(--lime);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(30px, 4vw, 46px);
+            margin-bottom: 14px;
+        }
+
+        .section-heading p {
+            color: rgba(255,255,255,0.62);
+            line-height: 1.9;
+        }
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 480px;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            background:
+                linear-gradient(rgba(5,25,18,0.12), rgba(5,25,18,0.45)),
+                url("https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1000&q=85") center/cover;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: 25px;
+            right: 25px;
+            padding: 17px 20px;
+            border-radius: 20px;
+            background: rgba(7,30,21,0.75);
+            border: 1px solid rgba(255,255,255,0.13);
+            backdrop-filter: blur(15px);
+        }
+
+        .about-badge strong {
+            display: block;
+            color: var(--lime);
+            font-size: 22px;
+        }
+
+        .about-text h3 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: rgba(255,255,255,0.67);
+            line-height: 2;
+            margin-bottom: 22px;
+        }
+
+        .about-points {
+            display: grid;
+            gap: 13px;
+        }
+
+        .about-point {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.82);
+        }
+
+        .about-point i {
+            color: var(--lime);
+        }
+
+        /* =========================================================
+           SERVICES
+        ========================================================= */
+        .services {
+            background: rgba(255,255,255,0.018);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 28px;
+            border-radius: 24px;
+            background: linear-gradient(145deg, rgba(255,255,255,0.09), rgba(255,255,255,0.035));
+            border: 1px solid rgba(255,255,255,0.10);
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(184,220,114,0.08);
+            top: -50px;
+            left: -50px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(184,220,114,0.30);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.20);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(184,220,114,0.10);
+            color: var(--lime);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: rgba(255,255,255,0.60);
+            line-height: 1.9;
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           WHY US
+        ========================================================= */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 28px 18px;
+            border-radius: 22px;
+        }
+
+        .feature i {
+            font-size: 30px;
+            color: var(--lime);
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            font-size: 12px;
+            color: rgba(255,255,255,0.52);
+            line-height: 1.8;
+        }
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 25px;
+        }
+
+        .contact-card {
+            padding: 30px;
+            border-radius: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 17px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .contact-item:last-child {
+            border-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(184,220,114,0.10);
+            color: var(--lime);
+        }
+
+        .contact-item small {
+            display: block;
+            color: rgba(255,255,255,0.45);
+            margin-bottom: 3px;
+        }
+
+        .contact-item strong {
+            font-size: 14px;
+        }
+
+        .map {
+            width: 100%;
+            min-height: 390px;
+            border: 0;
+            border-radius: 25px;
+            background: linear-gradient(135deg, rgba(30,118,81,0.35), rgba(6,24,18,0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .map-content i {
+            font-size: 45px;
+            color: var(--lime);
+            margin-bottom: 15px;
+        }
+
+        .map-content h3 {
+            margin-bottom: 8px;
+        }
+
+        .map-content p {
+            color: rgba(255,255,255,0.55);
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+        footer {
+            padding: 35px 0 100px; /* زيادة الهامش ليتناسب مع الأزرار العائمة */
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            font-weight: 800;
+        }
+
+        .footer-logo span {
+            color: var(--lime);
+        }
+
+        .copyright {
+            color: rgba(255,255,255,0.40);
+            font-size: 12px;
+        }
+
+        /* =========================================================
+           FLOATING BUTTONS (WHATSAPP & PHONE)
+        ========================================================= */
+        .floating-buttons {
+            position: fixed;
+            bottom: 22px;
+            left: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            z-index: 2000;
+        }
+
+        .floating-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float {
+            background: #25D366;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.35);
+            animation: whatsappPulse 2.5s infinite;
+        }
+
+        .phone-float {
+            background: #007bff;
+            box-shadow: 0 10px 30px rgba(0,123,255,0.35);
+            animation: phonePulse 2.5s infinite;
+            animation-delay: 1.25s;
+        }
+
+        @keyframes whatsappPulse {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+
+        @keyframes phonePulse {
+            0% { box-shadow: 0 0 0 0 rgba(0,123,255,0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(0,123,255,0); }
+            100% { box-shadow: 0 0 0 0 rgba(0,123,255,0); }
+        }
+
+        /* =========================================================
+           SCROLL REVEAL (ANIMATION)
+        ========================================================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================================
+           RESPONSIVE & MOBILE NAV
+        ========================================================= */
+        @media (max-width: 900px) {
+            .mobile-toggle {
+                display: flex;
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(5, 25, 18, 0.96);
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                border-radius: 20px;
+                padding: 20px;
+                margin-top: 10px;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-15px);
+                transition: all 0.3s ease;
+                box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            }
+
+            nav.mobile-active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            nav a {
+                display: block;
+                padding: 10px 0;
+                font-size: 16px;
+                border-bottom: 1px solid rgba(255,255,255,0.05);
+            }
+
+            nav a:last-child {
+                border-bottom: none;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-image {
+                min-height: 380px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 10px 14px;
+            }
+
+            .logo {
+                font-size: 15px;
+            }
+
+            .logo-icon {
+                width: 38px;
+                height: 38px;
+            }
+
+            .hero {
+                min-height: 95vh;
+            }
+
+            .hero-content {
+                padding-top: 90px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .floating-buttons {
+                bottom: 16px;
+                left: 16px;
+            }
+
+            .floating-btn {
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="navbar">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <div>
+                    مشتل <span>كاميليا</span>
+                </div>
+            </a>
+
+            <!-- NAVIGATION LINKS -->
+            <nav id="navMenu">
+                <a href="#home" onclick="closeNav()">الرئيسية</a>
+                <a href="#about" onclick="closeNav()">من نحن</a>
+                <a href="#services" onclick="closeNav()">خدماتنا</a>
+                <a href="#why" onclick="closeNav()">لماذا نحن</a>
+                <a href="#contact" onclick="closeNav()">تواصل معنا</a>
+            </nav>
+
+            <div class="nav-right-actions">
+                <a class="nav-btn" href="https://wa.me/966545316373" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    واتساب
+                </a>
+
+                <!-- MOBILE TOGGLE BUTTON -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="فتح القائمة">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="leaf one"><i class="fa-solid fa-leaf"></i></div>
+        <div class="leaf two"><i class="fa-solid fa-seedling"></i></div>
+
+        <div class="container">
+            <div class="hero-content reveal">
+                <div class="hero-tag">
+                    <i class="fa-solid fa-location-dot"></i>
+                    حي الملقا — طريق الملك سلمان
+                </div>
+
+                <h1>نصنع لك <span>حديقة</span> تستحق أن تُرى</h1>
+
+                <p>
+                    مشتل كاميليا للاند سكيب وتنسيق الحدائق العامة والخاصة.
+                    نصمم المساحات الخضراء وننفذها بعناية، من اختيار النباتات
+                    وحتى أنظمة الري والثيل والأحواض الزراعية.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/966545316373" target="_blank" class="btn btn-primary">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        تواصل معنا عبر واتساب
+                    </a>
+                    <a href="tel:0545316373" class="btn btn-outline">
+                        <i class="fa-solid fa-phone"></i>
+                        اتصل بنا الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <div class="section-heading reveal">
+                <div class="small-title">من نحن</div>
+                <h2>الطبيعة تبدأ من فكرة</h2>
+                <p>
+                    نهتم بكل تفصيلة لتتحول المساحة الخارجية إلى مكان
+                    جميل ومريح يعكس ذوقك ويضيف قيمة حقيقية للمكان.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <div class="about-badge">
+                        <strong>كاميليا</strong>
+                        لاند سكيب وتنسيق حدائق
+                    </div>
+                </div>
+
+                <div class="about-text reveal">
+                    <h3>نزرع الجمال... ونصنع المساحات</h3>
+                    <p>
+                        في مشتل كاميليا نقدم حلولاً متكاملة للحدائق
+                        والفلل والاستراحات، بداية من التصميم والتنسيق،
+                        مروراً بالزراعة وأنظمة الري، وصولاً إلى التفاصيل
+                        النهائية التي تجعل الحديقة أكثر جمالاً وحيوية.
+                    </p>
+
+                    <div class="about-points">
+                        <div class="about-point">
+                            <i class="fa-solid fa-circle-check"></i>
+                            تصميمات تناسب الفلل والاستراحات
+                        </div>
+                        <div class="about-point">
+                            <i class="fa-solid fa-circle-check"></i>
+                            حلول ري عادية وذكية
+                        </div>
+                        <div class="about-point">
+                            <i class="fa-solid fa-circle-check"></i>
+                            نباتات وأشجار ونخيل مختارة بعناية
+                        </div>
+                        <div class="about-point">
+                            <i class="fa-solid fa-circle-check"></i>
+                            تنفيذ احترافي ومظهر نهائي أنيق
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-heading reveal">
+                <div class="small-title">خدماتنا</div>
+                <h2>كل ما تحتاجه حديقتك</h2>
+                <p>خدمات متكاملة لتصميم وتنفيذ وصيانة المساحات الخضراء.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-tree"></i></div>
+                    <h3>تنسيق الحدائق</h3>
+                    <p>تصميم وتنسيق حدائق الفلل والاستراحات بأحدث الموديلات والأفكار التي تجمع بين الجمال والعملية.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <h3>شبكات وأنظمة الري</h3>
+                    <p>تركيب وتمديد شبكات الري العادية والحديثة، والتايمر وأنظمة الري الأوتوماتيكية الذكية، بالإضافة إلى أنظمة الرذاذ.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>زراعة الثيل</h3>
+                    <p>توريد وتركيب الثيل الطبيعي والصناعي بمختلف الأنواع، للحصول على مساحة خضراء أنيقة ومريحة.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>الأحواض الزراعية</h3>
+                    <p>تصميم وبناء أحواض الزهور والأشجار بطرق فنية ومبتكرة تضيف لمسة جمالية للمكان.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-spa"></i></div>
+                    <h3>توريد الشتلات</h3>
+                    <p>توفير أجود أنواع الأشجار والزهور والنخيل، بما في ذلك النخيل العربي والواشنطني.</p>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>حلول متكاملة</h3>
+                    <p>نساعدك في اختيار النباتات والتنسيقات المناسبة للحصول على حديقة متناسقة وجميلة وعملية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why">
+        <div class="container">
+            <div class="section-heading reveal">
+                <div class="small-title">لماذا كاميليا؟</div>
+                <h2>لأن التفاصيل تصنع الفرق</h2>
+            </div>
+
+            <div class="features">
+                <div class="feature glass reveal">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>أفكار عصرية</h3>
+                    <p>تصميمات فريدة تلبي احتياجاتك وتستغل كل زاوية في مساحتك.</p>
+                </div>
+                <div class="feature glass reveal">
+                    <i class="fa-solid fa-gem"></i>
+                    <h3>جودة عالية</h3>
+                    <p>نختار أفضل النباتات والمواد لضمان استدامة حديقتك.</p>
+                </div>
+                <div class="feature glass reveal">
+                    <i class="fa-solid fa-clock"></i>
+                    <h3>دقة في المواعيد</h3>
+                    <p>التزام كامل بالجدول الزمني المحدد للتنفيذ والتسليم.</p>
+                </div>
+                <div class="feature glass reveal">
+                    <i class="fa-solid fa-headset"></i>
+                    <h3>دعم واستشارات</h3>
+                    <p>نقدم لك النصائح المستمرة للعناية بحديقتك بعد التنفيذ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-heading reveal">
+                <div class="small-title">تواصل معنا</div>
+                <h2>جاهزون لخدمتك دائماً</h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card glass reveal">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <small>الموقع</small>
+                            <strong>حي الملقا - طريق الملك سلمان، الرياض</strong>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <small>واتساب / اتصال</small>
+                            <strong>0545316373</strong>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <small>أوقات العمل</small>
+                            <strong>يومياً من 8:00 صباحاً حتى 11:00 مساءً</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map reveal">
+                    <div class="map-content">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <h3>موقع المشتل على الخريطة</h3>
+                        <p>تفضل بزيارتنا في حي الملقا للاطلاع على جميع النباتات والحلول المتاحة.</p>
+                        <a href="https://maps.app.goo.gl/GyS62j4ma8dMvK9g8?g_st=aw" target="_blank" class="btn btn-primary">
+                            فتح الخريطة
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    مشتل <span>كاميليا</span>
+                </div>
+                <div class="copyright">
+                    جميع الحقوق محفوظة &copy; 2026 مشتل كاميليا
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING ACTION BUTTONS -->
+    <div class="floating-buttons">
+        <a href="tel:0545316373" class="floating-btn phone-float" aria-label="اتصال هاتفي مباشر">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://wa.me/966545316373" class="floating-btn whatsapp-float" target="_blank" aria-label="تواصل عبر الواتساب">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Scroll Reveal Animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
+
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        const toggleIcon = mobileToggle.querySelector('i');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-active');
+            if (navMenu.classList.contains('mobile-active')) {
+                toggleIcon.classList.remove('fa-bars');
+                toggleIcon.classList.add('fa-xmark');
+            } else {
+                toggleIcon.classList.remove('fa-xmark');
+                toggleIcon.classList.add('fa-bars');
+            }
+        });
+
+        function closeNav() {
+            navMenu.classList.remove('mobile-active');
+            toggleIcon.classList.remove('fa-xmark');
+            toggleIcon.classList.add('fa-bars');
+        }
+    </script>
+</body>
+</html>
